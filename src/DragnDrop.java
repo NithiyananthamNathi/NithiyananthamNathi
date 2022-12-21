@@ -2,12 +2,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 import dev.failsafe.Timeout;
 
 public class DragnDrop {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public  void draganddrop() {
 		// TODO Auto-generated method stub
 
 		System.setProperty("webdriver.chrome.driver",
@@ -40,7 +42,7 @@ public class DragnDrop {
 		//builder.clickAndHold(source1).dragAndDropBy(source1, 200, 300).build().perform();
 		//builder.release().perform();
 				
-		
+		driver.quit();
 	}
 
 }

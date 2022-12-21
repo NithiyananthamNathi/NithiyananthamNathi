@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 public class Button_handling {
-	public static void main(String[] args) throws InterruptedException {
+	
+	@Test
+	public  void btnhandle() {
 		System.setProperty("webdriver.chrome.driver",
 				"//home/icliniq-n7/Documents/selenium/chromedriver_linux64/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
@@ -20,7 +23,6 @@ public class Button_handling {
 		
 		String buttonpage = driver.getCurrentUrl();
 		driver.findElement(By.id("home")).click();;
-		Thread.sleep(3000);
 		driver.navigate().back();
 		
 		//Get the X & Y co-ordinates
@@ -52,6 +54,7 @@ public class Button_handling {
 		WebElement hold =driver.findElement(By.xpath("//*[@id=\"isDisabled\"]/div/h2"));
 		Actions hold1 = new Actions(driver);
 		hold1.clickAndHold(hold).build().perform();
+		driver.quit();
 			
 		
 	}
